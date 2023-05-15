@@ -14,5 +14,10 @@ switch ($url) {
         //điều hướng về controller thêm sản phẩm
         require_once 'controllers/ProductController.php';
         echo addProduct();
-    break;
+        break;
+    case 'remove-product':
+        //điều hướng về controller removeprodut
+        require_once 'controllers/ProductController.php';
+        echo removeProduct();
+        break;
 }

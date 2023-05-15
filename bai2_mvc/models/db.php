@@ -10,7 +10,8 @@ function getConnect(){
     );
     return $connect;
 }
-
+// nếu getALL là true thì sẽ thực hiện truy vấn lấy  dữ liệu
+// nếu getAll là false thì sẽ thực hiện truy vấn Thêm ,sửa ,xóa dữ liệu
 function getData($query, $getAll = true){
     $conn = getConnect();
 

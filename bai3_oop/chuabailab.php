@@ -69,4 +69,5 @@ $hs = new HocSinh("aaa","bbb",2003,"thanghhoangabc","0291922",7,8,9);
 //$hs->setLy(9);
 //$hs->setHoa(10);
 $hs->hienThongTinSV();
+//sử dụng parent contruct để thực hiện với giảng  viên
 ?>

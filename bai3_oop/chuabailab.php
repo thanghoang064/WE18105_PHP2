@@ -5,6 +5,14 @@ class ConNguoi {
     public $namSinh;
     public $email;
     public $sdt;
+    // đây là contruc  ở bên phía thằng cha
+    public function __construct($hoTen,$diaChi,$namSinh,$email,$sdt) {
+        $this->hoTen = $hoTen;
+        $this->diaChi = $diaChi;
+        $this->namSinh = $namSinh;
+        $this->email = $email;
+        $this->sdt = $sdt;
+    }
     public function setHoTen($hoTen) {
         $this->hoTen = $hoTen;
     }
@@ -25,6 +33,15 @@ class HocSinh extends ConNguoi {
     public $diemToan;
     public $diemLy;
     public $diemHoa;
+    //khởi tạo ở tk con
+    public function __construct($hoTen,$diaChi,$namSinh,$email,$sdt,$diemToan,$diemLy,$diemHoa) {
+        // gọi hàm khởi tạo của cha
+        parent::__construct($hoTen,$diaChi,$namSinh,$email,$sdt);
+        $this->diemToan = $diemToan;
+        $this->diemLy = $diemLy;
+        $this->diemHoa = $diemHoa;
+    }
+
     public function setToan($diemToan) {
         $this->diemToan = $diemToan;
 
@@ -44,12 +61,12 @@ class HocSinh extends ConNguoi {
         echo "-".$this->tinhTB();
     }
 }
-$hs = new HocSinh();
-$hs->setHoTen("Nguyen van a");
-$hs->setNamSinh(1998);
-$hs->setDiaChi("12321");
-$hs->setToan(8);
-$hs->setLy(9);
-$hs->setHoa(10);
+$hs = new HocSinh("aaa","bbb",2003,"thanghhoangabc","0291922",7,8,9);
+//$hs->setHoTen("Nguyen van a");
+//$hs->setNamSinh(1998);
+//$hs->setDiaChi("12321");
+//$hs->setToan(8);
+//$hs->setLy(9);
+//$hs->setHoa(10);
 $hs->hienThongTinSV();
 ?>

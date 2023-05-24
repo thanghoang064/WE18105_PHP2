@@ -9,7 +9,8 @@ switch ($url) {
     case '/':
         //điều hướng về controller sản phẩm
         require_once 'controllers/ProductController.php';
-        echo listProduct(); // gọi hàm trong controller Product
+        $productController = new ProductController();
+        echo $productController->listProduct(); // gọi hàm trong controller Product
     case 'add-product':
         //điều hướng về controller thêm sản phẩm
         require_once 'controllers/ProductController.php';

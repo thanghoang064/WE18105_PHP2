@@ -1,4 +1,6 @@
 <?php
+echo phpinfo();
+die;
 // file index sẽ điều hướng người dùng vào controller tương ứng
 //echo $_GET['url']; // $GET sẽ lấy từ trên thanh url
 //die;

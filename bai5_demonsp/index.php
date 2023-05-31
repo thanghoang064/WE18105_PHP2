@@ -1,12 +1,13 @@
 <?php
-include_once "models/Product.php";
-include_once "models/Customer.php";
-include_once "models/Category.php";
-include_once "controllers/CustomerController.php";
-include_once "controllers/ProductController.php";
-use Models\Product;
-use Models\Customer;
-use Controllers\ProductController;
+require_once "vendor/autoload.php";
+//include_once "models/Product.php";
+//include_once "models/Customer.php";
+//include_once "models/Category.php";
+//include_once "controllers/CustomerController.php";
+//include_once "controllers/ProductController.php";
+use App\Models\Product;
+use App\Models\Customer;
+use App\Controllers\ProductController;
 $product = new Product();
 $customer = new Customer();
 $productController = new ProductController();

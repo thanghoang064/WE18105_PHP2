@@ -13,13 +13,16 @@ $router->filter('auth', function(){
     }
 });
 
-
+// khu vực cần quan tâm -----------
 // bắt đầu định nghĩa ra các đường dẫn
 $router->get('/', function(){
     return "trang chủ";
 });
-
-$router->get('test', [App\Controllers\ProductController::class, 'index']);
+//định nghĩa đường dẫn trỏ đến Product Controller
+$router->get('list-product',[App\Controllers\ProductController::class,'index']);
+$router->get('detail-product/{id}/{hihi}',[App\Controllers\ProductController::class,'detail']);
+// khu vực cần quan tâm -----------
+//$router->get('test', [App\Controllers\ProductController::class, 'index']);
 
 # NB. You can cache the return value from $router->getData() so you don't have to create the routes each request - massive speed gains
 $dispatcher = new Phroute\Phroute\Dispatcher($router->getData());

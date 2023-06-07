@@ -20,6 +20,8 @@ $router->get('/', function(){
 });
 //định nghĩa đường dẫn trỏ đến Product Controller
 $router->get('list-product',[App\Controllers\ProductController::class,'index']);
+$router->get('add-product',[App\Controllers\ProductController::class,'addProduct']);
+$router->post('post-product',[App\Controllers\ProductController::class,'postProduct']);
 $router->get('detail-product/{id}/{hihi}',[App\Controllers\ProductController::class,'detail']);
 // khu vực cần quan tâm -----------
 //$router->get('test', [App\Controllers\ProductController::class, 'index']);

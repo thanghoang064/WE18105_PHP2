@@ -14,7 +14,7 @@
         <div class="header-main">
             <ul class="menu">
                 <li><a href="">Quản lý danh mục</a></li>
-                <li><a href="">Quản lý sản phẩm</a></li>
+                <li><a href="{{ route("list-product") }}">Quản lý sản phẩm</a></li>
             </ul>
         </div>
     </header>

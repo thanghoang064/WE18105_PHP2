@@ -10,9 +10,9 @@ class ProductController extends BaseController {
         $products = $this->product->getProduct(); // đón giá trị từ model trả về
         return $this->render('product.index',compact('products'));
     }
-    public function detail($id,$hihi) {
-        echo $id."-".$hihi;
-        die;
+    public function detail($id) {
+        $product = $this->product->getDetailProduct($id);
+        return $this->render('product.edit',compact('product'));
     }
     public function addProduct() {
         return $this->render('product.add');
@@ -48,4 +48,14 @@ class ProductController extends BaseController {
             }
         }
     }
+    public function editProduct($id) {
+        if (isset($_POST['nut'])) {
+            $result = $this->product->updateProduct($id,$_POST['ten_sp'],$_POST['don_gia']);
+            if ($result) {
+                redirect('success',"Sửa sản phẩm thành công",'detail-product/'.$id);
+
+            }
+        }
+    }
+
 }
